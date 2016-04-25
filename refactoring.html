@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="author" content="Kathryn Stolee" />
+<meta name="keywords" content="Kathryn Stolee, Katie Stolee, esquared, unl, lincoln, nebraska, software engineering" />
+<meta name="description" content="Kathryn Stolee is an Assistant Professor at North Carolina State University in the Department of Computer Science." />
+<link rel="stylesheet" type="text/css" href="main.css" />
+<title>Kathryn T. Stolee</title>
+</head>
+<body>
+<!-- Header. -->
+<table class="header">
+  <tr>
+    <td class="header-title">Kathryn T. Stolee</td>
+    <td class="header-icon">
+      
+    </td>
+  </tr>
+</table>
+
+<!-- Navigation bar. -->
+<table class="navbar">
+  <tr>
+    <td class="navitem"><a href="./index.html">Home</a></td>
+    <td class="navitem"><a href="./publications.html">Publications</a></td>
+        <td class="navitem"><a href="./research.html">Research Projects</a></td>
+    <td class="navitem"><a href="./contact.html">Contact and CV</a></td>
+  </tr>
+</table>
+
+<p>
+  <span style="font-size: 25px; font-family: arial; font-weight: bold"> Refactoring Pipe-like Mashups: Preliminary Study </span>
+</p>
+            <p>
+              In a preliminary study of the impact of refactoring on pipe-like mashups, we evaluated 
+            a smaller set of 200 Pipe-like mashups and manually inspected the end-to-end
+            transofmrations of those pipes. We make this experimental infrastructure available here, and
+            detail our experience in a <a href="http://digitalcommons.unl.edu/csetechreports/112/">Technical Report</a>.</p>
+            
+            
+            				<div class="bar">Experimental Infrastructure</div>
+                            <p>
+                            Download the executable for the experimental infrastructure: <a href="refactoring/Experimental.zip">Experimental.zip</a>
+
+                            The infrastructure runs with the following java configuration:
+                           </p>
+                           <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;java version "1.6.0_15"
+                                <br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java(TM) SE Runtime Environment (build 1.6.0_15-b03)
+                            </p>
+                            
+                            <p>
+                            Unzip the archive, and there will be two directories and a runnable jar. The directory 'orig/'
+                            contains the original pipes used in this experiment. The directory 'trans/' is initially empty. 
+                            It will be populated once the experimental infrastructure is executed.  
+                            </p>
+                            <p>
+                            <b>To run all* refactorings on all pipes:</b>
+                            </p>
+                            <pre>
+                            java -jar Pipes.jar 
+                            </pre>
+                            <p>
+                            The command-line output will have seven columns: the pipe name, the number of modules in the original pipe,
+                            the number of modules in the transformed pipe, the number of parameters in the original pipe, the
+                            number of parameters in the transformed pipe, the ratio of wired parameters to modules in the 
+                            original pipe, and the ratio of wired parameters to modules in the transformed pipe. 
+                            </p>
+                            <p>
+                            The 'trans/' directory will now contain the refactored pipes.
+                            </p>
+                            <p>
+                            <b>To run all* refactorings on one pipe:</b>
+                            </p>
+                            <pre>
+                            java -jar Pipes.jar -f &lt;infile&gt; &lt;outfile&gt;
+                            </pre>
+                            <p>
+                            The output will have the same seven columns described above. Additionally, the &lt;outfile&gt; will
+                            contain the JSON representation of the transformed pipe.
+                            </p>
+                            <div class="bar">Experimental Artifacts</div>
+                            <p>
+                            Each pipe is represented in JSON and stored in a text file, XXX.txt where 'XXX' is the pipe
+                            number. To make the pipe easier to read, we also encode the pipe structure in a graph using the
+                            <a href="http://www.graphviz.org/doc/info/lang.html">DOT language</a>. Each Pipe has a
+                            corresponding .dot file.
+                            </p>
+                            <p>
+                            <a href="refactoring/orig.html">Original Pipes Programs</a>
+                            <br />
+                            <a href="refactoring/trans.html">Refactored Pipes Programs</a>
+                            </p>
+
+                            <p>
+                            <font size="2">
+                            *For the experimental infrastructure to perform the 'Remove Deprecated Sources' refactoring,
+                            it is necessary for it to have valid session information for a user logged into Yahoo! Pipes.
+                            Because of this, we are not able at this time to make that refactoring available online. 
+                            </font>
+                            </p>
+
+                
+                    
+<!-- Footer -->
+<table class="footer">
+  <tr>
+    <td class="signature">
+      Last updated on October 14, 2010.
+    </td>
+  </tr>
+</table>                   
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6150764-1");
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

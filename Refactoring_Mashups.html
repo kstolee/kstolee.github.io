@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="author" content="Kathryn Stolee" />
+<meta name="keywords" content="Kathryn Stolee, Katie Stolee, esquared, unl, lincoln, nebraska, software engineering" />
+<meta name="description" content="Kathryn Stolee is an Assistant Professor at North Carolina State University in the Department of Computer Science." />
+<link rel="stylesheet" type="text/css" href="main.css" />
+<title>Kathryn T. Stolee</title>
+</head>
+<body>
+<!-- Header. -->
+<table class="header">
+  <tr>
+    <td class="header-title">Kathryn T. Stolee</td>
+    <td class="header-icon">
+      
+    </td>
+  </tr>
+</table>
+
+<!-- Navigation bar. -->
+<table class="navbar">
+  <tr>
+    <td class="navitem"><a href="./index.html">Home</a></td>
+    <td class="navitem"><a href="./publications.html">Publications</a></td>
+        <td class="navitem"><a href="./research.html">Research Projects</a></td>
+    <td class="navitem"><a href="./contact.html">Contact and CV</a></td>
+  </tr>
+</table>
+
+<p>
+  <span style="font-size: 25px; font-family: arial; font-weight: bold"> Empirical Study using Yahoo! Pipes </span>
+</p>
+
+
+
+<div class="bar">About the Study</div>
+<p>
+Mashups are becoming increasingly popular as end users are able to easily access, manipulate, and compose data from several web sources. We have observed, however, that end user mashups tend to suffer from several deficiencies.  In this work, we identify and specify smells indicative of those deficiencies, and design specialized refactorings to remove them, focusing on mashups created with the popular Yahoo! Pipes environment (but also relevant to other mashup tools, such as Apatar, DERI Pipes, IBM Mashup Center, Plagger, and xFruits). Our refactorings reduce the complexity of pipes, increase their abstraction, update broken sources of data and dated components, and standardize pipes to fit the community development patterns. Our assessment on <a href="artifacts.html">8,051</a> pipe-like mashups developed by thousands of end users shows that smells are present in 81% of the pipes, and that the proposed refactorings can reduce that number to 16%, illustrating the potential of refactoring to support thousands of end users developing pipe-like mashups.
+</p>
+
+<div class="bar">Study Infrastructure</div>
+<p>
+To perform the study, we had to be able to obtain a pipe representation, analyze it to detect smells, and refactor it to reduce those smells. Yahoo!, however, does not provide an API to perform any of those actions outside of the proprietary Pipes Editor. Thus, we created an infrastructure that allows us to perform these tasks on thousands of pipes to assess the refactorings effectiveness in reducing smells. We make a part of that infrastructure available for download as an executable JAR file: <a href="http://www.cs.iastate.edu/~kstolee/refmash.jar">Refactoring Mashups</a>
+</p>
+
+<p>
+The infrastructure runs with the following java configurations:
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;java version "1.6.0_18"
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java(TM) SE Runtime Environment (build 1.6.0_18-b07)
+</p>
+<p>
+This infrastructure allows you to perform smell detection* and/or one refactoring* on any pipe. Additionally, it will output the smell counts before and after the pipe, and/or a <a href="http://www.graphviz.org/doc/info/lang.html">DOT</a> format of the pipe. See below for proper usage, or use the --help flag for more information.
+</p>
+<p>
+Proper Usage: Pipes &lt;analysis&gt; &lt;output&gt; &lt;refactoring&gt; pipeid
+</p>
+<table>
+
+<tr>
+<td>&lt;analysis&gt;</td><td></td><td></td>
+</tr>
+<tr>
+ <td></td>       <td>-s</td>    <td>Smell Detection Only</td>
+</tr>
+<tr>
+ <td></td><td>-a</td>    <td>Smell Detection And Refactoring</td>
+</tr>
+<td>&lt;output&gt;</td><td></td><td></td>
+</tr>
+<tr>
+ <td></td><td>-d</td><td>    DOT format output</td>
+</tr>
+<tr>
+ <td></td><td>-c</td><td>    Command line description of smell detection</td>
+</tr>
+<tr>
+ <td></td><td>-a</td><td>    DOT output and command line description</td>
+</tr>
+<td>&lt;refactoring&gt;</td><td></td><td></td>
+</tr>
+<tr>
+<td></td><td>-cm</td><td>Clean Up Module</td>
+</tr>
+<tr>
+<td></td><td>-rnm</td><td>Remove Non-Contributing Module</td>
+</tr>
+<tr>
+<td></td><td>-pdm</td><td>Push Down Module</td>
+</tr>
+<tr>
+<td></td><td>-mrm</td><td>Merge Redundant Module</td>
+</tr>
+<tr>
+<td></td><td>-cdp</td><td>Collapse Duplicate Paths</td>
+</tr>
+<tr>
+<td></td><td>-pum</td><td>Pull Up Module</td>
+</tr>
+<tr>
+<td></td><td>-rdm</td><td>Replace Deprecated Module</td>
+</tr>
+<tr>
+<td></td><td>-rds</td><td>Remove Deprecated Sources</td>
+</tr>
+<tr>
+<td></td><td>-noo</td><td>Normalize Order of Operations</td>
+</tr>
+</table>
+
+<p>
+A preliminary study of our refactoring techniques, published in a <a href="http://digitalcommons.unl.edu/csetechreports/112/">technical report</a>, involved manual inspection of the 200 artifacts involved with that study. Details can be found <a href="http://www.cs.iastate.edu/~kstolee/refactoring.html">here</a>.
+</p>
+
+<p>
+<font size="2">
+*The refactorings are intended to operate independently of Yahoo!, so some smells and refactorings are not available in this version of the infrastructure. The omitted analyses and transformations involve 1) an analysis of community artifacts, or 2) are dependent on either the Yahoo! server or the repository, both of which can change over time. The Global Isomorphic Paths smell, Extract Global Subpipe refactoring, and Extract Local Subpipe refactoring have such dependencies. As an additional note, the Invalid Sources smell and the Non-conforming Operator Ordering smells utilize the invalid sources and operator orderings that were determined in February 2010.
+</font>
+</p>
+
+<!-- Footer -->
+<table class="footer">
+  <tr>
+    <td class="signature">
+      Last updated on October 14, 2010.
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6150764-1");
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
