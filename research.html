@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="author" content="Kathryn Stolee" />
+<meta name="keywords" content="Kathryn Stolee, Katie Stolee, esquared, unl, lincoln, nebraska, software engineering" />
+<meta name="description" content="Kathryn Stolee is an Assistant Professor at North Carolina State University in the Department of Computer Science." />
+<link rel="stylesheet" type="text/css" href="main.css" />
+<title>Kathryn T. Stolee</title>
+</head>
+<body>
+<!-- Header. -->
+<table class="header">
+  <tr>
+    <td class="header-title">Kathryn T. Stolee</td>
+    <td class="header-icon">
+      
+    </td>
+  </tr>
+</table>
+
+<!-- Navigation bar. -->
+<table class="navbar">
+  <tr>
+    <td class="navitem"><a href="./index.html">Home</a></td>
+    <td class="navitem"><a href="./publications.html">Publications</a></td>
+        <td class="navitem navitem-current"><a href="./research.html">Research Projects</a></td>
+          <td class="navitem"><a href="./teaching.html">Teaching</a></td>
+    <td class="navitem"><a href="./contact.html">Contact and CV</a></td>
+  </tr>
+</table>
+
+<p>
+  <span style="font-size: 25px; font-family: arial; font-weight: bold"> Active Research Projects </span>
+</p>
+
+
+<div class="bar">Semantic Code Search
+    | <a href="papers/fse2015.pdf">FSE 2015</a>
+    | <a href="papers/JSS2015.pdf">JSS 2015</a>
+    | <a href="papers/TOSEM2014.pdf">TOSEM 2014</a>
+    | <a href="http://digitalcommons.unl.edu/computerscidiss/64/">PhD Thesis</a>
+    | <a href="papers/fse2012nier.pdf">FSE NIER 2012</a>
+    | <a href="papers/icse2012ds.pdf">ICSE 2012 DS</a> </div>
+<p>
+Searching for code is a common task among programmers, with the ultimate goal of reuse. While the process of searching for code – issuing a query and selecting a relevant match – is straightforward, several costs must be balanced, including the costs of specifying the query, examining the results to find desired code, and not finding a relevant result. For syntactic searches the query cost is quite low, but the results are often irrelevant, so the examination cost is high and matches may be missed. Semantic searches may return more relevant results, but current techniques that involve writing complex specifications or executing code against test cases are costly to the developer, and close matches cannot be easily identified. We have developed an approach for semantic search in which developers specify lightweight specifications and an SMT solver identifies matching programs from a repository. A program repository is automatically encoded offline so the search for programs is efficient. Programs are also encoded at various abstraction levels to enable partial matches when no, or few, exact matches exists. 
+</p>
+
+<div class="bar">Semantic Code Search Driven Program Repair
+    | <a href="papers/ase2015.pdf">ASE 2015</a>
+</div>
+<p><b>Funding: <a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1446932">SHF: EAGER: Collaborative Research: Demonstrating the Feasibility of Automatic Program Repair Guided by Semantic Code Search</a></b>
+</p>
+<div class=”indent” style=”padding-left:25px;”><p>
+Automated program repair can potentially reduce debugging costs and improve
+software quality but recent studies have drawn attention to shortcomings in
+the quality of automatically generated repairs. We propose a new kind of
+repair that uses the large body of existing open-source code to find
+potential fixes. The key challenges lie in efficiently finding code
+semantically similar (but not identical) to defective code and then
+appropriately integrating that code into a buggy program. We present
+SearchRepair, a repair technique that addresses these challenges by
+(1) encoding a large database of human-written code fragments as SMT
+constraints on input-output behavior, (2) localizing a given defect to likely
+buggy program fragments and deriving the desired input-output behavior for
+code to replace those fragments, (3) using state-of-the-art constraint
+solvers to search the database for fragments that satisfy that behavior and
+replacing the likely buggy code with these potential patches, and
+(4) validating that the patches repair the bug against program test suites.
+</p></div>
+
+
+<div class="bar">Crowdsourcing and Software Engineering
+    | <a href="papers/CSISE_2015.pdf">CSI-SE 2015</a>
+    | <a href="papers/ESEM2015.pdf">ESEM 2015</a>
+    | <a href="papers/ESEM2010.pdf">ESEM 2010</a>
+</div>
+<div class=”indent” style=”padding-left:25px;”><p>
+Crowdsourcing is a compelling approach for accomplishing tasks that require opinions or work from a large
+number of people. I am interested in techniques and approaches to help researchers and practitioners
+ to best leverage crowdsourcing to conduct software engineering tasks and to evaluate software engineering research. 
+
+
+</p></div>
+
+<p>
+<span style="font-size: 25px; font-family: arial; font-weight: bold"> Inactive Research Projects </span>
+</p>
+<div class="barinactive">Refactoring End-User Programs
+    | <a href="papers/TSE2013.pdf">TSE 2013</a>
+    | <a href="papers/icse2011.pdf">ICSE 2011</a>
+    | <a href="papers/esem2010.pdf">ESEM 2010</a>
+    | <a href="http://digitalcommons.unl.edu/computerscidiss/6/">MS Thesis</a> </div>
+<p>
+One of the most popular end user programming domains is mashups.  Mashup programming environments are popping up to help end users to create mashups that tailor and individualize data streams. This means that the power of creation is in the hands of the end user. However, the mashups created by end users are often littered with errors and deficiencies that can make them error-prone and hard to understand. Further, users often 'reinvent the wheel' by creating mashups that have the same functionality as mashups created by other users.
+</p>
+<p>
+Our work with web mashups deals with refactoring techniques to reduce the complexity, increase abstraction, updated broken or dated components, and standardize the programs to fit community development patterns. Results from our empirical study refactoring <a href="artifacts.htm">8,051</a> Yahoo! Pipes programs and details regarding the manipulation infrastructure can be found <a href="Refactoring_Mashups.html">here</a>.
+</p> 
+
+<div class="barinactive">End-User Programmers and Their Communities  | <a href="papers/esem2011.pdf">ESEM 2011</a></div>
+<p>
+End-user programmers outnumber professionals programmers, write software that matters to an increasingly large number of users, and face software engineering challenges that are similar to their professionals counterparts. Yet, we know little about how these end-user programmers create and share artifacts as part of a community. To gain a better understanding of these issues, we perform an artifact-based community analysis of 32,887 mashups from the the Yahoo! Pipes repository. We observed that, like with other online communities, there is great deal of attrition but authors that persevere tend to improve over time, creating pipes that are more configurable, diverse, complex, and popular. We also discovered, however, that end- user programmers employ the repository in different ways than professionals, do not effectively reuse existing programs, and in most cases do not have an awareness of the community. 
+</p>
+<p>
+We make the data used in our analysis available <a href="esem2011/artifacts.html">here</a>.
+</p>           
+
+<div class="barinactive">Copy and Paste Habits of End Users | <a href="papers/stolee_VLHCC2009.pdf">VL/HCC 2009</a> </div>
+<p>
+By observing the clipboard as a mode of data transfer in the desktop environment, we are searching for patterns in end users' usage history for the purposes of finding areas in which users are inefficient in transferring data and could benefit from automation and validation of copy and paste activities.
+</p>
+
+<div class="barinactive">Robofox | <a href="papers/robofox.pdf">FSE 2008</a> </div>
+<p>
+Using automatically-generated assertions to improve the robustness of Web macros. For details, visit the <a target="_blank" href="http://esquared.unl.edu/wikka.php?wakka=AboutRobofox">website</a>.
+</p>
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     
+     ga('create', 'UA-66800827-1', 'auto');
+     ga('send', 'pageview');
+     
+    </script>
+</body>
+</html>
