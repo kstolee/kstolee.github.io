@@ -43,15 +43,17 @@ li.compactitem {
 p {
     margin: 8px 2px 8px 2px;
 }
-pemph {
-    margin: 16px 4px 16px 4px;
-    font-weight: italic;
-    background-color: #D78EF5;
+pemph {    border-top: 2px
+    margin: 8px 2px 8px 2px;
+    font-weight: bold;
+    background-color: #A0DAE6;
     font-size: 18px;
-    padding-top: 3px;
-        padding-bottom: 3px;
-            padding-left: 3px;
-                padding-right: 3px;
+        padding: 10px;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 9px;
+    padding-right: 9px;
 }
 pindent {
     padding-left:25px
