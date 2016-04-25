@@ -46,8 +46,12 @@ p {
 pemph {
     margin: 16px 4px 16px 4px;
     font-weight: italic;
-    background-color: #D6D5D4;
-        font-size: 14px;
+    background-color: #D78EF5;
+    font-size: 18px;
+    padding-top: 3px;
+        padding-bottom: 3px;
+            padding-left: 3px;
+                padding-right: 3px;
 }
 pindent {
     padding-left:25px
