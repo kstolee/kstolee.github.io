@@ -5,8 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="Content-Language" content="en-us" />
 <meta name="author" content="Kathryn Stolee" />
-<meta name="keywords" content="Kathryn Stolee, Katie Stolee, esquared, unl, lincoln, nebraska, software engineering" />
-<meta name="description" content="Kathryn Stolee is an Assistant Professor at North Carolina State University in the Department of Computer Science." />
+<meta name="keywords" content="Kathryn Stolee, Katie Stolee, NC State, NCSU, software engineering, code search" />
+<meta name="description" content="Kathryn Stolee is an Associate Professor at North Carolina State University in the Department of Computer Science." />
 <link rel="stylesheet" type="text/css" href="main.css" />
 <title>Kathryn T. Stolee</title>
 </head>
@@ -37,7 +37,8 @@
 </p>
 
 
-<div class="bar">Semantic Code Search
+<div class="bar">Semantic Code Analysis
+	| <a href="https://doi.org/10.1145/3392859">CSCW 2020</a>
      | <a href="papers/ICSE2020.pdf">ICSE 2020</a>
 	| <a href="https://doi.org/10.1145/3196398.3196425">MSR 2018</a>
     | <a href="papers/fse2015.pdf">FSE 2015</a>
@@ -46,16 +47,26 @@
     | <a href="http://digitalcommons.unl.edu/computerscidiss/64/">PhD Thesis</a>
     | <a href="papers/fse2012nier.pdf">FSE NIER 2012</a>
     | <a href="papers/icse2012ds.pdf">ICSE 2012 DS</a> </div>
-  <p><b>Funding: <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1749936&HistoricalAwards=false">CAREER: On the Foundations of Semantic Code Search</a></b>
+  <p><b>Funding (Semantic Code Search): <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1749936&HistoricalAwards=false">CAREER: On the Foundations of Semantic Code Search</a></b>
 </p>  
-    <p>
-	    <b>Students:</b> <a href="http://bigfatnoob.us/">George Mathew</a> (PhD in progress), <a href="https://ginabai.github.io/">Gina R. Bai</a> (PhD in progress), Justin Middleton (PhD in progress), Joshua Kayani (REU 2016), James Saylor (Ugrad, 2014)
+  <p><b>Funding (Cross-language Analysis): <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2006947&HistoricalAwards=false">SHF: SMALL: Automated Discovery of Cross-Language Program Behavior Inconsistency</a></b>
+</p>  
+
+	<p>
+	    <b>Students:</b> <a href="http://bigfatnoob.us/">George Mathew</a> (PhD in progress),  Justin Middleton (PhD in progress), Joshua Kayani (REU 2016), James Saylor (Ugrad, 2014)
 </p>
+	<p>
+		Behavioral code analysis seeks to understand the relationship of code to a description of that code. In semantic code search, the code description is a behavioral input-output example. In cross-language code analysis, the description is code in one language, with the goal of idnetifying code in another language that behaves the same (or close). 
+	</p>
 <p>
-Searching for code is a common task among programmers, with the ultimate goal of reuse. While the process of searching for code – issuing a query and selecting a relevant match – is straightforward, several costs must be balanced, including the costs of specifying the query, examining the results to find desired code, and not finding a relevant result. For syntactic searches the query cost is quite low, but the results are often irrelevant, so the examination cost is high and matches may be missed. Semantic searches may return more relevant results, but current techniques that involve writing complex specifications or executing code against test cases are costly to the developer, and close matches cannot be easily identified. We have developed an approach for semantic search in which developers specify lightweight specifications and an SMT solver identifies matching programs from a repository. A program repository is automatically encoded offline so the search for programs is efficient. Programs are also encoded at various abstraction levels to enable partial matches when no, or few, exact matches exists. 
+	<i> Semantic code search</i>: Searching for code is a common task among programmers, with the ultimate goal of reuse. While the process of searching for code – issuing a query and selecting a relevant match – is straightforward, several costs must be balanced, including the costs of specifying the query, examining the results to find desired code, and not finding a relevant result. For syntactic searches the query cost is quite low, but the results are often irrelevant, so the examination cost is high and matches may be missed. Semantic searches may return more relevant results, but current techniques that involve writing complex specifications or executing code against test cases are costly to the developer, and close matches cannot be easily identified. We have developed an approach for semantic search in which developers specify lightweight specifications and an SMT solver identifies matching programs from a repository. A program repository is automatically encoded offline so the search for programs is efficient. Programs are also encoded at various abstraction levels to enable partial matches when no, or few, exact matches exists. 
 </p>
+	<p>
+		<i>Cross-language analysis</i>: This project will develop techniques to automatically identify incapabilities and potential misconceptions between two programming languages. Two main research tasks will be investigated for this project. The first task is to develop an approach for automatically identifying clusters of similar code based on dynamic behavior, likely invariants, observed side effects, and performance. Behavioral clusters are formed from snippets in multiple languages that produce the same outputs on the same inputs. Likely invariants from observed behavior are used to describe similarities and differences. The second task is to develop a technique to identify misconceptions that emerge when a programmer assumes code should behave the same but it does not. To identify misconceptions, the technique leverages the behavior clusters and characterizations from the code similarity analysis; code that looks similar but behaves differently in overt (behavior) or insidious (performance, side effects) ways are candidates. The technique will rank misconceptions based on probability of appearing and likely impact. Finally, the technique will use invariants, behavior, side effects and performance to form automated explanations of behavioral similarities and differences. Finally, these techniques and explanations will be applied for the benefit of two groups of real programmers: transfer students who know one language and need to learn a new one, and data scientists who work with many programming languages to complete their tasks. For programmers learning a new language, in student, professional, or hobby capacities, this work aims to increase the speed and reliability with which they acquire knowledge of the programming language.
+	</p>
 
 <div class="bar">Semantic Code Search Driven Program Repair
+	| <a href="http://dx.doi.org/10.1109/TSE.2019.2944914">TSE 2020</a>
 	| <a href="https://doi.org/10.1145/3183440.3194999">ICSE Poster 2018</a>
     | <a href="papers/icse2017.pdf">ICSE NIER 2017</a>
     | <a href="papers/ase2015.pdf">ASE 2015</a>
@@ -90,7 +101,8 @@ replacing the likely buggy code with these potential patches, and
 
 
 <div class="bar">Regular Expression Analysis
-	| SANER 2019
+	| <a href="https://doi.org/10.1145/3379597.3387464">MSR 2020</a>
+	| <a href="https://doi.org/10.1109/SANER.2019.8667972">SANER 2019</a>
     | <a href="https://doi.org/10.1145/3236024.3236072">FSE 2018</a>
     | <a href="https://doi.org/10.1109/ASE.2017.8115653">ASE 2017</a>
     | <a href="papers/ISSTA2016.pdf">ISSTA 2016</a>
@@ -117,7 +129,27 @@ empirical evidence to support design decisions by regex tool
 builders.
 
 </p></div>
+	
+	
+	<div class="bar">Computer Science Education
+		| <a href="https://arxiv.org/abs/2102.05729">ICSE JSEET 2021</a>
+		| <a href="https://doi.org/10.1145/3387904.3389274">ICPC 2020</a>
+		| <a href="https://doi.org/10.1109/RESPECT49803.2020.9272454">RESPECT 2020</a>
+		| <a href="https://doi.org/10.1109/ICPC.2019.00039">ICPC 2019</a>
+		| <a href="https://doi.org/10.1145/3183377.3183393">ICSE SEET 2018<a>
+</div>
+<div class=”indent” style=”padding-left:25px;”>
+<p>
+	<b>Students:</b>	<a href="https://ginabai.github.io/">Gina R. Bai</a> (PhD in progress), Kai Presler-Marshall (PhD in progress)
+</p>
 
+We are exploring a variety of topics in computer science education, including human studies on student behavior during various software engineering tasks 
+	and the potential role of program repair of SQL statements in education.  In broader diversity efforts to improve retention of underrepresented individualsin computing, we have drawn from social-psychological research to create a lightweightintervention that provides positive, granular exam feedback. Results from two 100-levelcomputing courses show the intervention increased all students’ self-assessments of CSability but only increased women’s CS persistence intentions.
+
+</p></div>
+
+
+	
 
 
 <p>
