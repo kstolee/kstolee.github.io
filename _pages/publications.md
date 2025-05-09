@@ -13,18 +13,17 @@ classes: wide
 
 <style>ol.bibliography li { list-style: none }</style>
 
-Full-Length Conference and Journal Articles
+Journal Articles and Full-Length Conference Publications 
 -----------------------------------
-{% bibliography --query @*[pubtype=0] %}
+{% bibliography --query @*[pubtype<=1] %}
+
 
 Short or Workshop Publications
 -----------------------------------
-{% bibliography --query @*[pubtype=1] %}
-
-Other
------------------------------------
 {% bibliography --query @*[pubtype=2] %}
 
-Theses
+Other Publications
 -----------------------------------
 {% bibliography --query @*[pubtype=3] %}
+
+
