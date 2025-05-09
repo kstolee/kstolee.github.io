@@ -1,1 +1,0 @@
-digraph test1 { node [shape=box] "_OUTPUT" [label="_OUTPUT:output:0"];"sw-324" [label="sw-324:urlbuilder:8"];"sw-68" [label="sw-68:textinput:5"];"sw-360" [label="sw-360:fetchdata:2"];"sw-68" -> "sw-324" [label="_w0"];"sw-324" -> "sw-360" [label="_w1"];"sw-360" -> "_OUTPUT" [label="_w2"];}

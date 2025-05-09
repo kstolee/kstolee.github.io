@@ -1,1 +1,0 @@
-digraph test1 { node [shape=box] "sw_63" [label="sw_63:translate:1"];"_OUTPUT" [label="_OUTPUT:output:0"];"sw-147" [label="sw-147:uniq:1"];"sw_44" [label="sw_44:fetch:1"];"sw-101" [label="sw-101:regex:6"];"sw_44" -> "sw-147" [label="_w0"];"sw_63" -> "sw-101" [label="_w1"];"sw-101" -> "_OUTPUT" [label="_w2"];"sw-147" -> "sw_63" [label="_w3"];}

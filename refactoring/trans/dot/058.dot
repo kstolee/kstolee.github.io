@@ -1,1 +1,0 @@
-digraph test1 { node [shape=box] "sw-257" [label="sw-257:datebuilder:1"];"_OUTPUT" [label="_OUTPUT:output:0"];"sw-194" [label="sw-194:fetch:18"];"sw-232" [label="sw-232:sort:2"];"sw-202" [label="sw-202:filter:5"];"sw-194" -> "sw-202" [label="_w0"];"sw-202" -> "sw-232" [label="_w1"];"sw-257" -> "sw-202" [label="_w2"];"sw-232" -> "_OUTPUT" [label="_w7"];}

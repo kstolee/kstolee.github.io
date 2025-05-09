@@ -1,1 +1,0 @@
-{"wires":[{"tgt":{"moduleid":"_OUTPUT","id":"_INPUT"},"src":{"moduleid":"sw-683","id":"_OUTPUT"},"id":"_w39"}],"modules":[{"conf":{},"type":"output","id":"_OUTPUT"},{"conf":{},"type":"pipe:8oWdRPwp3RGsiDEOMlrX_Q","id":"sw-683"}]}
