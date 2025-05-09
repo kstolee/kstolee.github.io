@@ -1,0 +1,393 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>SHF: SMALL: Automated Discovery of Cross-Language Program Behavior Inconsistency - Kathryn (Katie) T. Stolee, PhD</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Kathryn (Katie) T. Stolee, PhD">
+<meta property="og:title" content="SHF: SMALL: Automated Discovery of Cross-Language Program Behavior Inconsistency">
+
+
+  <link rel="canonical" href="https://kstolee.github.io/grants/2020-08-01-SHF-1">
+  <meta property="og:url" content="https://kstolee.github.io/grants/2020-08-01-SHF-1">
+
+
+
+  <meta property="og:description" content="Abstract: In the software industry, hundreds of programming languages exist, many of which programmers are expected to be proficient in. The common assumption has been that once a programmer knows one language, they can leverage concepts and knowledge already learned and easily pick up another programming language. Unfortunately, empirical studies find this process to be error-prone and ineffective due to imprecise mismatches between concepts and expressions across programming languages. This project develops techniques to ease the acquisition of knowledge for new programming languages by identifying and explaining how the behaviors of code in different languages relate. The anticipated result is that programmers will learn new languages faster and write code with fewer bugs. Beyond the general benefit of better-educated programmers, techniques for teaching computer programming are important in particular because programming is a crucial skill for a digitally literate society.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2020-08-01T00:00:00-07:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Katie Stolee, PhD",
+      "url" : "https://kstolee.github.io",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://kstolee.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Kathryn (Katie) T. Stolee, PhD Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://kstolee.github.io/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    
+
+<!-- start custom head snippets -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://kstolee.github.io/images/apple-touch-icon-57x57.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="60x60" href="https://kstolee.github.io/images/apple-touch-icon-60x60.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="72x72" href="https://kstolee.github.io/images/apple-touch-icon-72x72.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="76x76" href="https://kstolee.github.io/images/apple-touch-icon-76x76.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="114x114" href="https://kstolee.github.io/images/apple-touch-icon-114x114.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="120x120" href="https://kstolee.github.io/images/apple-touch-icon-120x120.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="144x144" href="https://kstolee.github.io/images/apple-touch-icon-144x144.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="152x152" href="https://kstolee.github.io/images/apple-touch-icon-152x152.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kstolee.github.io/images/apple-touch-icon-180x180.png?v=M44lzPylqQ">
+<link rel="icon" type="image/png" href="https://kstolee.github.io/images/favicon-32x32.png?v=M44lzPylqQ" sizes="32x32">
+<link rel="icon" type="image/png" href="https://kstolee.github.io/images/android-chrome-192x192.png?v=M44lzPylqQ" sizes="192x192">
+<link rel="icon" type="image/png" href="https://kstolee.github.io/images/favicon-96x96.png?v=M44lzPylqQ" sizes="96x96">
+<link rel="icon" type="image/png" href="https://kstolee.github.io/images/favicon-16x16.png?v=M44lzPylqQ" sizes="16x16">
+<link rel="manifest" href="https://kstolee.github.io/images/manifest.json?v=M44lzPylqQ">
+<link rel="mask-icon" href="https://kstolee.github.io/images/safari-pinned-tab.svg?v=M44lzPylqQ" color="#000000">
+<link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="https://kstolee.github.io/images/mstile-144x144.png?v=M44lzPylqQ">
+<meta name="msapplication-config" content="https://kstolee.github.io/images/browserconfig.xml?v=M44lzPylqQ">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="https://kstolee.github.io/assets/css/academicons.css"/>
+
+
+<!-- Support for MatJax -->
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://kstolee.github.io/">Kathryn (Katie) T. Stolee, PhD</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://kstolee.github.io/publications/">Publications</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://kstolee.github.io/talks/">Talks</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://kstolee.github.io/grants/">Grants</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://kstolee.github.io/files/kstoleeCV.pdf">CV</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="https://kstolee.github.io/images/profile.png" class="author__avatar" alt="Katie Stolee, PhD">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Katie Stolee, PhD</h3>
+    <p class="author__pronouns">she/her</p>
+    <p class="author__bio">Associate Professor and Researcher in Software Engineering and Education</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      <!-- Font Awesome icons / Biographic information  -->
+      
+        <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>3228H Engineering Building 2</li>
+      
+      
+        <li class="author__desktop"><i class="fa fa-solid fa-building-columns icon-pad-right" aria-hidden="true"></i>North Carolina State University</li>
+      
+      
+      
+        <li><a href="mailto:ktstolee@ncsu.edu"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
+      
+
+      <!-- Font Awesome and Academicons icons / Academic websites -->
+            
+      
+        <li><a href="https://scholar.google.com/citations?user=YICZNZAAAAAJ&hl=en"><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
+      
+      
+      
+        <li><a href="https://orcid.org/0000-0003-0584-7094"><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
+      
+                              
+      
+
+      <!-- Font Awesome icons / Repositories and software development -->
+      
+            
+            
+      
+        <li><a href="https://github.com/kstolee"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Github</a></li>
+      
+            
+            
+
+      <!-- Font Awesome icons / Social media -->
+      
+      
+            
+      
+                  
+                  
+      
+            
+            
+            
+      
+            
+                  
+            
+      
+            
+            
+      
+              
+      
+                      
+      
+      
+            
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="SHF: SMALL: Automated Discovery of Cross-Language Program Behavior Inconsistency">
+    <meta itemprop="description" content="Abstract: In the software industry, hundreds of programming languages exist, many of which programmers are expected to be proficient in. The common assumption has been that once a programmer knows one language, they can leverage concepts and knowledge already learned and easily pick up another programming language. Unfortunately, empirical studies find this process to be error-prone and ineffective due to imprecise mismatches between concepts and expressions across programming languages. This project develops techniques to ease the acquisition of knowledge for new programming languages by identifying and explaining how the behaviors of code in different languages relate. The anticipated result is that programmers will learn new languages faster and write code with fewer bugs. Beyond the general benefit of better-educated programmers, techniques for teaching computer programming are important in particular because programming is a crucial skill for a digitally literate society.">
+    <meta itemprop="datePublished" content="August 01, 2020">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">SHF: SMALL: Automated Discovery of Cross-Language Program Behavior Inconsistency
+</h1>
+          
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="2020-08-01T00:00:00-07:00">August 01, 2020</time></p>
+        
+        
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>Abstract: In the software industry, hundreds of programming languages exist, many of which programmers are expected to be proficient in. The common assumption has been that once a programmer knows one language, they can leverage concepts and knowledge already learned and easily pick up another programming language. Unfortunately, empirical studies find this process to be error-prone and ineffective due to imprecise mismatches between concepts and expressions across programming languages. This project develops techniques to ease the acquisition of knowledge for new programming languages by identifying and explaining how the behaviors of code in different languages relate. The anticipated result is that programmers will learn new languages faster and write code with fewer bugs. Beyond the general benefit of better-educated programmers, techniques for teaching computer programming are important in particular because programming is a crucial skill for a digitally literate society.</p>
+
+<p>This project will develop techniques to automatically identify incapabilities and potential misconceptions between two programming languages. Two main research tasks will be investigated for this project. The first task is to develop an approach for automatically identifying clusters of similar code based on dynamic behavior, likely invariants, observed side effects, and performance. Behavioral clusters are formed from snippets in multiple languages that produce the same outputs on the same inputs. Likely invariants from observed behavior are used to describe similarities and differences. The second task is to develop a technique to identify misconceptions that emerge when a programmer assumes code should behave the same but it does not. To identify misconceptions, the technique leverages the behavior clusters and characterizations from the code similarity analysis; code that looks similar but behaves differently in overt (behavior) or insidious (performance, side effects) ways are candidates. The technique will rank misconceptions based on probability of appearing and likely impact. Finally, the technique will use invariants, behavior, side effects and performance to form automated explanations of behavioral similarities and differences. Finally, these techniques and explanations will be applied for the benefit of two groups of real programmers: transfer students who know one language and need to learn a new one, and data scientists who work with many programming languages to complete their tasks. For programmers learning a new language, in student, professional, or hobby capacities, this work aims to increase the speed and reliability with which they acquire knowledge of the programming language.</p>
+
+<p>This award reflects NSF’s statutory mission and has been deemed worthy of support through evaluation using the Foundation’s intellectual merit and broader impacts review criteria.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=https://kstolee.github.io/grants/2020-08-01-SHF-1" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://kstolee.github.io/grants/2020-08-01-SHF-1" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://kstolee.github.io/grants/2020-08-01-SHF-1" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="https://kstolee.github.io/grants/2018-08-01-CAREER" class="pagination--pager" title="CAREER: On the Foundations of Semantic Code Search
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<a href="/sitemap/">Sitemap</a>
+<!-- end custom footer snippets -->
+
+        
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="http://github.com/kstolee"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="https://kstolee.github.io/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 Katie Stolee, PhD. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="https://kstolee.github.io/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+
