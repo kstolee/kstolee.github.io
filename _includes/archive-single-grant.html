@@ -25,11 +25,11 @@
           alt="">
       </div>
     {% endif %}
-    <h2 class="archive__item-title" itemprop="headline">
+    <h3 class="archive__item-title" itemprop="headline">
       {% if post.nsfurl %}
         <a href="{{post.nsfurl}}" rel="permalink">{{ title }}</a>
       {% endif %}
-    </h2>
+    </h3>
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
@@ -39,6 +39,6 @@
     {% if post.amount %}<p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> Amount: {{ post.amount }}</p>{% endif %}
 
     {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>{% endif %}
+    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ hi post.excerpt | markdownify }}</p>{% endif %}
   </article>
 </div>
